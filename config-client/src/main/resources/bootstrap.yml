@@ -1,11 +1,29 @@
 spring:
   application:
-    name: config-client
+    name: chenzj
   cloud:
     config:
-      uri: http://localhost:1201/
-      profile: default
-      label: master
-
+#      uri: http://localhost:7001/
+      profile: dev
+#      label: master
+#      username: user
+#      password: 107d0e1f-7034-470e-9898-ea4f9ba4bb2a
+      discovery:
+        enabled: true
+        service-id: config-server
+  rabbitmq:
+    host: localhost
+    port: 5672
+    virtual-host: test
+    username: springcloud
+    password: 123456        
 server:
-  port: 2001
+  port: 8080
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+
+management:
+  security:
+    enabled: false

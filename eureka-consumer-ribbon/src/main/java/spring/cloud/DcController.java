@@ -13,7 +13,7 @@ public class DcController {
     @Autowired
     RestTemplate restTemplate;
 
-    @GetMapping("/consumer")
+    @GetMapping("/ribbon-consumer")
     public String dc() {
 //        ServiceInstance serviceInstance = loadBalancerClient.choose("eureka-client");
 //        String url = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/dc";

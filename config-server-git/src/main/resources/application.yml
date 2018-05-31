@@ -6,5 +6,19 @@ spring:
       server:
         git:
           uri: https://github.com/chenzj520/springcloud.git
+          searchPaths: spring_cloud_in_action/config-repo
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/     
 server:
-  port: 1201
+  port: 7001
+  
+management:
+  security:
+    enabled: false
+  
+#security:
+#  user:
+#    name: user 
+#    password: 107d0e1f-7034-470e-9898-ea4f9ba4bb2a
